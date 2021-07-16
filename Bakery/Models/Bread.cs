@@ -12,11 +12,7 @@ namespace Bakery.Breads
 }
 
 
-
-
     // public int NumOfLoaves { get; set; }
-    // public int CostOfLoaf {get; set; }
-    // public int BreadDiscount {get; set; }
 
     // public static int BreadTotal(int inputtedBreadOrder) //method
     // {
@@ -33,7 +29,7 @@ namespace Bakery.Breads
       // public int LoavesDiscounted()
     // {
       //int freeLoaf = NumOfLoaves / 3;
-      //LoavesDiscounted = (NumOfLoaves - freeLoaf) * singleLoafCost;
+      //int loavesDiscountedCost = (NumOfLoaves - freeLoaf) * singleLoafCost;
     // }
 
   //buy 2 get 1 free:

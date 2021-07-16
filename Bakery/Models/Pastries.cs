@@ -13,9 +13,6 @@ namespace Bakery.Pastries
 
 
 
-
-
-
     // public int NumOfPastries { get; set; }
 
     // public static int PastryTotal(int inputtedPastryOrder) //method
@@ -33,7 +30,7 @@ namespace Bakery.Pastries
     // public int PastriesDiscounted()
     // {
       //int discountedPastryCost = NumOfPastries / 3;
-      //PastriesDiscounted = (NumOfPastries * singlePastryCost) - discountedPastryCost ;
+      //int pastriesDiscountedCost = (NumOfPastries * singlePastryCost) - discountedPastryCost ;
     // }
 
 //Buy 1 for \$2 or 3 for $5.
