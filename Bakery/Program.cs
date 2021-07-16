@@ -82,9 +82,9 @@ namespace Bakery
     //  }
     //}
       Breads newBread = new Breads();
-    // Pastry newPastryOrder = new Pastry();
+      Pastries newPastryOrder = new Pastries();
       newBread.BreadTotal();
-    // newPastryOrder.PastryTotal();
+      newPastryOrder.PastryTotal();
     }
   }
 }

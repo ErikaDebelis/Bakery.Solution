@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 namespace Bakery.Pastry
 {
-//   public class Pastries
-//   {
-//     public void PastryTotal()
-//     {
-//       Console.WriteLine("what about this one?");
-//     }
-//   }
+  public class Pastries
+  {
+    public void PastryTotal()
+    {
+      Console.WriteLine("what about this one?");
+    }
+  }
 }
 
 
