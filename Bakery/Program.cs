@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Bakery.Breads;
-using Bakery.Pastries;
+using Bakery.Bread;
+using Bakery.Pastry;
 namespace Bakery
 {
   public class Program
@@ -81,7 +81,7 @@ namespace Bakery
     //    }
     //  }
     //}
-      Bread newBread = new Bread();
+      Breads newBread = new Breads();
     // Pastry newPastryOrder = new Pastry();
       newBread.BreadTotal();
     // newPastryOrder.PastryTotal();

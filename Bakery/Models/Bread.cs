@@ -1,6 +1,7 @@
-﻿namespace Breads
+﻿using System.Collections.Generic;
+namespace Bakery.Bread
 {
-  public class Bread
+  public class Breads
   {
     public void BreadTotal()
     {

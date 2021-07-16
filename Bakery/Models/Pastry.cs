@@ -1,12 +1,13 @@
-namespace Pastries
+using System.Collections.Generic;
+namespace Bakery.Pastry
 {
-  public class Pastry
-  {
-    public void PastryTotal()
-    {
-      Console.WriteLine("what about this one?");
-    }
-  }
+//   public class Pastries
+//   {
+//     public void PastryTotal()
+//     {
+//       Console.WriteLine("what about this one?");
+//     }
+//   }
 }
 
 

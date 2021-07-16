@@ -1,8 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Bakery.Breads;
-using Bakery.Pastries;
-
+using Bakery.Bread;
+using Bakery.Pastry;
 namespace Bakery.Tests
 {
   [TestClass]
