@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Bakery.Breads;
+using Bakery.Bread;
 using Bakery.Pastries;
 
 namespace Bakery.Tests
@@ -11,8 +11,8 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_InitializesBread_Bread()
     {
-      Bread newBreadOrder = new Bread();
-      Assert.AreEqual(typeof(bread), newBreadOrder.GetType());
+      Breads newBreadOrder = new Breads();
+      Assert.AreEqual(typeof(breads), newBreadOrder.GetType());
     }
   }
 }
