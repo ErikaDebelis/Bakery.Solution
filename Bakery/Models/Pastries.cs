@@ -1,6 +1,4 @@
-using System;
-using System.Collections.Generic;
-namespace Bakery.Pastries
+namespace Pastries
 {
   public class Pastry
   {
