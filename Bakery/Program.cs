@@ -1,12 +1,15 @@
 using System;
-using Bakery.Breads;
-using Bakery.Pastries;
-namespace Bakery
+
+namespace PierresBakery
 {
   public class Program
   {
     
+    static void Main(string[] args)
+    {
+        // Display the number of command line arguments.
+        Console.WriteLine(args.Length);
+    }
 
-    
   }
 }

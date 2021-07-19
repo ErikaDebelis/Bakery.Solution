@@ -1,9 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System;
-using Bakery.Bread;
-using Bakery.Pastry;
-namespace Bakery.Tests
+
+namespace PierresBakery.Tests
 {
   [TestClass]
   public class BreadTests
@@ -11,8 +10,8 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_InitializesBread_Bread()
     {
-      Breads newBread = new Breads();
-      Assert.AreEqual(typeof(breads), newBread.GetType());
+      // Breads newBread = new Breads();
+      // Assert.AreEqual(typeof(breads), newBread.GetType());
     }
 
     [TestMethod]
@@ -23,7 +22,7 @@ namespace Bakery.Tests
       var bakery = new Bakery(); // Class with our functions
       
       var expectedOutput = 4;
-      var input = '4';
+      var input = "4";
       
       //Act
       int ouput = bakery.GetNumberOfLoavesOrdered(input);

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Bakery.Bread
+namespace PierresBakery
 {
   public class Breads
   {
