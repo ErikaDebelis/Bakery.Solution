@@ -38,23 +38,5 @@ namespace PierresBakery
       }
       return result;
     }
-    // public static int SetBreadDiscount(int result)
-    // {
-    //   if (PierresBakery.Bread.QuantityOrdered % 3 = 0)
-    //   {
-    //     int freeLoaf = QuantityOrdered / 3;
-    //     TotalCost = (QuantityOrdered - freeLoaf) * IndividualCost;
-    //       return TotalCost;
-    //   }
-    //   else if (PierresBakery.Bread.QuantityOrdered % 3 != 0)
-    //   {
-    //     TotalCost = IndividualCost * QuantityOrdered;// not sure how to do this....
-    //       return TotalCost;
-    //   }
-    //   else
-    //   {
-    //     return TotalCost;
-    //   }
-    // }
   }
 }
