@@ -6,11 +6,10 @@
     
     public static int SetBreadDiscount(int result)
     {
-      if (PierresBakery.Bread.QuantityOrdered % 3 = 0)
-      {
-        int freeLoaf = QuantityOrdered / 3;
-        TotalCost = (QuantityOrdered - freeLoaf) * IndividualCost;
-          return TotalCost;
+      int freeLoaf = QuantityOrdered / 3;
+      TotalCost = (BreadTotal.QuantityOrdered - freeLoaf) * BreadTotal.IndividualCost;
+        return TotalCost;
+    }
       }
       else if (PierresBakery.Bread.QuantityOrdered % 3 != 0)
       {

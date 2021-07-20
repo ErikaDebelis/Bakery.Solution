@@ -3,7 +3,7 @@ using System;
 
 namespace PierresBakery
 {
-  public class Bakery
+  public static class Bakery
   {
     public int QuantityOrdered  { get; set; }
     public int IndividualCost { get; set; }
