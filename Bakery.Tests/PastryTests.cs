@@ -1,13 +1,25 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using System.Collections.Generic;
-// using System;
-// using PierresBakery;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System;
+using PierresBakery;
 
-// namespace PierresBakery.Tests
-// {
-//   [TestClass]
-//   public class PastryTests
-//   {
+namespace PierresBakery.Tests
+{
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void SetPastryTotal_SetValuesToPropertiesOfPastry_Pastry()
+    {
+      Pastry newPastry = new Pastry(); // Model
+      Bakery newBakery = new Bakery(); // Class with our functions
+      int QuantityOrdered = 4;
+      int expectedOutput = 4;
+      //Act
+      int output = Pastry.PastryTotal(QuantityOrdered);
+      //Assert
+      Assert.AreEqual(expectedOutput, output);
+    }
 //     [TestMethod]
 //     public void GetNumberOfPastriesOrdered_ReturnTheCorrectAmountOfPastries()
 //     {
@@ -45,6 +57,6 @@
 //     }
 
 
-//   }
+  }
 
-// }
+}
