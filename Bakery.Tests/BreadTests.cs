@@ -10,29 +10,21 @@ namespace PierresBakery.Tests
   {
 
     [TestMethod]
-    public void SetBreadTotal_SetValuesToPropertiesOfBread_Bread()
+    public void ()
     {
-      Bread newBread = new Bread(); // Model
+  //     //Arrange
 
-      int QuantityOrdered = 4;
-      int expectedOutput = 4;
-      //Act
-      int output = Bread.Bread(QuantityOrdered);
-      //Assert
-      Assert.AreEqual(expectedOutput, output);
-    }
+  //     //Act
 
-    [TestMethod]
-    public void SetBreadDeal_InitializesBread_Bread()
-    {
-      //Arrange
-
-      //Act
-
-      //Assert
+  //     //Assert
     }
 
 
   }
 
 }
+
+
+//TEST CLASS CONSTRUCTOR + all properties
+//TEST FOR QUANTITYORDERED
+//TEST FOR TOTAL COST - discounts 2 different returns- then 2 tests

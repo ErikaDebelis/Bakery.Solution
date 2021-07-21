@@ -17,8 +17,6 @@ A console web application that allows you to choose between bread an pastries to
 2. Open git BASH terminal and navigate to the Bakery folder within the directory
 3. Run "dotnet run" in the git BASH terminal to install dependencies, minify the code, and run the project in the terminal.
     ``$ dotnet run``
-4. Create a '.env' file in your root directory
-    ``$ touch .env``
 #### _To run tests_ ####
 1. To run/review tests navigate to the Bakery.Tests folder
 2. Run "dotnet test" in the terminal to create and launch the application!

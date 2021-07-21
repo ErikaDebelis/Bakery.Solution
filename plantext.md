@@ -1,19 +1,26 @@
     Bread.cd plan :
 
 
+    public int GetDiscount()
+    {
+      return Discount;
+    }
+  }
 
-
-    
+    ---------------------------------------------------------------------
     public static int SetBreadDiscount(int result)
     {
       int freeLoaf = QuantityOrdered / 3;
-      TotalCost = (BreadTotal.QuantityOrdered - freeLoaf) * BreadTotal.IndividualCost;
-        return TotalCost;
+      if (PierresBakery.Bread.QuantityOrdered !% 3 = 0)
+      {
+        TotalCost = IndividualCost * QuantityOrdered;
+          return TotalCost;
+      }
     }
       }
-      else if (PierresBakery.Bread.QuantityOrdered % 3 != 0)
+      else if (PierresBakery.Bread.QuantityOrdered % 3 = 0)
       {
-        TotalCost = IndividualCost * QuantityOrdered;// not sure how to do this....
+        TotalCost = (IndividualCost * QuantityOrdered) - (IndividualCost * freeLoaf);
           return TotalCost;
       }
       else
@@ -31,21 +38,10 @@
 
 
 
-        public static int SetPastryDiscount(int result)
+    public static int SetPastryDiscount(int result)
     {
-      if (PierresBakery.Pastry.QuantityOrdered % 3 = 0)
-      {
-        int freePastry = QuantityOrdered / 3;
-        TotalCost = (QuantityOrdered * freeLoaf) - IndividualCost;
-          return TotalCost;
-      }
-      else if (PierresBakery.Pastry.QuantityOrdered % 3 != 0)
-      {
-        TotalCost = IndividualCost * QuantityOrdered;// not sure how to do this....
-          return TotalCost;
-      }
-      else
-      {
+      int freePastry = Math.Floor(QuantityOrdered / 3);
+      TotalCost = Math.Ceiling(freePastry * 5);
         return TotalCost;
       }
     }
@@ -134,3 +130,38 @@ namespace Bakery
     }
   }
 }
+
+
+
+----------------
+
+    public int GetNumberOfPastriesOrdered(string pastryOrder)
+    {
+      int result = 0;
+      try
+      {
+        result =int.Parse(pastryOrder);
+          return result;
+      }
+      catch
+      {
+        Console.WriteLine($"Unable to parse '{pastryOrder}'");
+      }
+      return result;
+    }
+
+
+public int GetNumberOfLoavesOrdered(string breadOrder)
+    {
+      int result = 0;
+      try
+      {
+        result =int.Parse(breadOrder);
+          return result;
+      }
+      catch
+      {
+        Console.WriteLine($"Unable to parse '{breadOrder}'");
+      }
+      return result;
+    }

@@ -5,21 +5,53 @@ using PierresBakery;
 
 namespace PierresBakery.Tests
 {
-  [TestClass]
+    [TestClass]
   public class PastryTests
   {
+
     [TestMethod]
-    public void SetPastryTotal_SetValuesToPropertiesOfPastry_Pastry()
+    public void ()
     {
-      Pastry newPastry = new Pastry(); // Model
-      Bakery newBakery = new Bakery(); // Class with our functions
-      int QuantityOrdered = 4;
-      int expectedOutput = 4;
-      //Act
-      int output = Pastry.PastryTotal(QuantityOrdered);
-      //Assert
-      Assert.AreEqual(expectedOutput, output);
+  //     //Arrange
+
+  //     //Act
+
+  //     //Assert
     }
+
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // [TestClass]
+  // public class PastryTests
+  // {
+  //   [TestMethod]
+  //   public void SetPastryTotal_SetValuesToPropertiesOfPastry_Pastry()
+  //   {
+  //     Pastry newPastry = new Pastry(); // Model
+  //     Bakery newBakery = new Bakery(); // Class with our functions
+  //     int QuantityOrdered = 4;
+  //     int expectedOutput = 4;
+  //     //Act
+  //     int output = Pastry.PastryTotal(QuantityOrdered);
+  //     //Assert
+  //     Assert.AreEqual(expectedOutput, output);
+  //   }
 //     [TestMethod]
 //     public void GetNumberOfPastriesOrdered_ReturnTheCorrectAmountOfPastries()
 //     {
