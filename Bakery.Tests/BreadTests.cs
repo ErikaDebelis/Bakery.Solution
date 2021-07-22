@@ -1,6 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using System;
 using PierresBakery;
 
 namespace PierresBakery.Tests
@@ -8,20 +6,23 @@ namespace PierresBakery.Tests
     [TestClass]
   public class BreadTests
   {
-
     [TestMethod]
-    public void ()
+    public void SetProperties_BreadConstructorSetsPropertiesAccurately_Int()
     {
-  //     //Arrange
+      //Arrange
+      int quantityOrdered = 5;
+      int totalCost = 20;
 
-  //     //Act
+      //Act
+      Bread newBread = new Bread(quantityOrdered, totalCost);
+      int resultQuantityOrdered = newBread.QuantityOrdered;
+      int resultTotalCost = newBread.TotalCost;
 
-  //     //Assert
+      //AsserttotalCost
+      Assert.AreEqual(resultQuantityOrdered, newBread.QuantityOrdered);
+      Assert.AreEqual(resultTotalCost, newBread.TotalCost);
     }
-
-
   }
-
 }
 
 

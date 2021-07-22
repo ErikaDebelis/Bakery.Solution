@@ -5,15 +5,10 @@
     public int QuantityOrdered  { get; set; }
     public int TotalCost { get; set; }
 
-    public Bread(int result)
+    public Bread(int result, int totalCost)
     {
       QuantityOrdered = result;
-      IndividualCost = 5;
-      Discount = 0;
-      TotalCost = 0;
+      TotalCost =totalCost;
     }
   }
 }
-
-
-

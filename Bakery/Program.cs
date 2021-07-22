@@ -1,6 +1,7 @@
 using System;
+using PierresBakery;
 
-namespace PierresBakery
+namespace PierresBakeryProgram
 {
   public class Program
   {
