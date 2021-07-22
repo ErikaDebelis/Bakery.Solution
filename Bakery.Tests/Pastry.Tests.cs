@@ -1,31 +1,29 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using System.Collections.Generic;
-// using System;
-// using PierresBakery;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PierresBakery;
 
-// namespace PierresBakery.Tests
-// {
-//     [TestClass]
-//   public class PastryTests
-//   {
+namespace PierresBakery.Tests
+{
+    [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void SetProperties_PastryConstructorSetsPropertiesAccurately_Int()
+    {
+      //Arrange
+      int quantityOrdered = 5;
+      int totalCost = 9;
 
-//     public void SetProperties_PastryConstructorSetsPropertiesAccurately_Int()
-//     {
-//       //Arrange
-//       int quantityOrdered = 5;
-//       int totalCost = 9;
+      //Act
+      Pastry newPastry = new Pastry(quantityOrdered, totalCost);
+      int resultQuantityOrdered = newPastry.QuantityOrdered;
+      int resultTotalCost = newPastry.TotalCost;
 
-//       //Act
-//       Pastry newPastry = new Pastry(quantityOrdered, totalCost);
-//       int resultQuantityOrdered = newPastry.QuantityOrdered;
-//       int resultTotalCost = newPastry.TotalCost;
-
-//       //AsserttotalCost
-//       Assert.AreEqual(resultQuantityOrdered, newPastry.QuantityOrdered);
-//       Assert.AreEqual(resultTotalCost, newPastry.TotalCost);
-//     }
-//   }
-// }
+      //AsserttotalCost
+      Assert.AreEqual(resultQuantityOrdered, newPastry.QuantityOrdered);
+      Assert.AreEqual(resultTotalCost, newPastry.TotalCost);
+    }
+  }
+}
 
 
 //TEST CLASS CONSTRUCTOR + all properties

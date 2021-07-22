@@ -7,8 +7,8 @@ namespace PierresBakery
 
     public Pastry(int result, int totalCost)
     {
-      int QuantityOrdered = result;
-      int TotalCost = totalCost;
+      QuantityOrdered = result;
+      TotalCost = totalCost;
     }
   }
 }
