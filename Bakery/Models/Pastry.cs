@@ -4,18 +4,21 @@ namespace PierresBakery
   public class Pastry
   {
     public int QuantityOrdered  {get; set; }
-    public int TotalCost {get; set; }
+    public double TotalCost {get; set; }
 
     public Pastry(int quantityOrdered, int totalCost)
     {
       QuantityOrdered = quantityOrdered;
       TotalCost = totalCost;
     }
-    public double SetPastryDiscount(double quantityOrdered)
+    public double SetPastryDiscount(int quantityOrdered)
     {
-      double freePastry= Math.Floor(quantityOrdered/3);
+      var convertedQuantityOrdered = Convert.ToDouble(quantityOrdered);
+
+      double freePastry= Math.Floor(convertedQuantityOrdered/3);
       double totalCost = Math.Ceiling(freePastry * 5);
-        return TotalCost;
+
+      return TotalCost;
     }
   }
 }

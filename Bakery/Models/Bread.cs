@@ -8,7 +8,7 @@
     public Bread(int quantityOrdered, int totalCost)
     {
       QuantityOrdered = quantityOrdered;
-      TotalCost =totalCost;
+      TotalCost = totalCost;
     }
     public int SetBreadDiscount(int quantityOrdered)
     {
