@@ -12,10 +12,19 @@
     }
     public int SetBreadDiscount(int quantityOrdered)
     {
-      int freeLoaf= QuantityOrdered/3;
+      int freeLoaf= quantityOrdered/3;
       int individualCost = 5;
-      TotalCost = individualCost * QuantityOrdered;
-        return TotalCost;
+
+      if (quantityOrdered % 3 == 0)
+      {
+        TotalCost = (individualCost * quantityOrdered) - (individualCost * freeLoaf);
+          return TotalCost;
+      }
+      else
+      {
+        TotalCost = (individualCost * quantityOrdered) - individualCost;
+          return TotalCost;
+      }
     }
   }
 }

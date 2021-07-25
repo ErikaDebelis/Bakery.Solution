@@ -24,10 +24,26 @@ namespace PierresBakery.Tests
     }
 
         [TestMethod]
-    public void SetBreadDiscount_SetBreadDiscountMethodAccuratelyCalculatestotalCostWithoutAccountingForDiscounts_Int()
+    public void SetBreadDiscount_CalculatesTotalCostWithoutAccountingForDiscounts_Int()
     {
       //Arrange
       int quantityOrdered = 5;
+      int totalCost = 20;
+
+      //Act
+      Bread newBread = new Bread(quantityOrdered, totalCost);
+      int resultQuantityOrdered = newBread.QuantityOrdered;
+      int resultTotalCost = newBread.TotalCost;
+
+      //AsserttotalCost
+      Assert.AreEqual(resultQuantityOrdered, newBread.QuantityOrdered);
+      Assert.AreEqual(resultTotalCost, 20);
+    }
+    [TestMethod]
+    public void SetBreadDiscount_CalculatesTotalCostWithDiscounts_Int()
+    {
+      //Arrange
+      int quantityOrdered = 6;
       int totalCost = 20;
 
       //Act
