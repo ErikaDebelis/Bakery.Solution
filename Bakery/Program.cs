@@ -28,7 +28,7 @@ namespace Bakery
       {
         if (bakeryChoice == "bread")
         {
-          bread.QuantityOrdered = OrderBread();
+          OrderBread();
         }
         else if (bakeryChoice == "no")
         {
@@ -37,7 +37,7 @@ namespace Bakery
       }
       catch
       {
-        Console.WriteLine("$error");
+        Console.WriteLine($"{error}");
       }
     }
 
@@ -61,7 +61,7 @@ public void FinalizeOrder() {
       }
       catch
       {
-        Console.WriteLine("$error");
+        Console.WriteLine($"{error}");
       }
     }
 
@@ -111,24 +111,22 @@ public void FinalizeOrder() {
       
      
     }
-    public static int Checkout()
+    public void Checkout()
     {
-       Console.WriteLine("Would you like to checkout? Type 'checkout' to checkout and click 'Enter' to restart our program");
+      Console.WriteLine("Would you like to checkout? Type 'checkout' to checkout and click 'Enter' to restart our program");
       
       string bakeryChoice = Console.ReadLine().ToUpper();
       
       if (bakeryChoice == "checkout")
           {
-            Checkout();
+            double finalTotal = bread.TotalCost + pastry.TotalCost;
+      Console.WriteLine("Your order total comes to $finalTotal");
+      Console.WriteLine("Thank you for choosing Pierre's Bakery! - See you again soon!");
           }
       else
       {
-        Main();
+        TakeOrder();
       }
-
-      finalTotal = totalBreadCost + totalPastryCost;
-      Console.WriteLine("Your order total comes to $finalTotal");
-      Console.WriteLine("Thank you for choosing Pierre's Bakery! - See you again soon!");
     }
   }
 }
