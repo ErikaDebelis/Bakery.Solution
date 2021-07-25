@@ -16,7 +16,7 @@ namespace PierresBakery.Tests
       //Act
       Pastry newPastry = new Pastry(quantityOrdered, totalCost);
       int resultQuantityOrdered = newPastry.QuantityOrdered;
-      int resultTotalCost = newPastry.TotalCost;
+      double resultTotalCost = newPastry.TotalCost;
 
       //AsserttotalCost
       Assert.AreEqual(resultQuantityOrdered, newPastry.QuantityOrdered);
@@ -32,7 +32,7 @@ namespace PierresBakery.Tests
       //Act
       Pastry newPastry = new Pastry(quantityOrdered, totalCost);
       int resultQuantityOrdered = newPastry.QuantityOrdered;
-      int resultTotalCost = newPastry.TotalCost;
+      double resultTotalCost = newPastry.TotalCost;
 
       //AsserttotalCost
       Assert.AreEqual(resultQuantityOrdered, newPastry.QuantityOrdered);

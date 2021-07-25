@@ -13,7 +13,7 @@ namespace PierresBakery
     }
     public double SetPastryDiscount(int quantityOrdered)
     {
-      var convertedQuantityOrdered = Convert.ToDouble(quantityOrdered);
+      double convertedQuantityOrdered = Convert.ToDouble(quantityOrdered);
 
       double freePastry= Math.Floor(convertedQuantityOrdered/3);
       double totalCost = Math.Ceiling(freePastry * 5);

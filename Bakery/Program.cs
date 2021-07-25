@@ -9,13 +9,17 @@ namespace Bakery
     string error = "Invalid response; please try again.";
     public static void Main()
     {
-      var program = new Program();
+      Program program = new Program();
 
       program.TakeOrder();
+      program.OrderBread();
+      program.OrderPastry();
+      program.SecondOrderQuestion();
+      program.Checkout();
     }
 
-    public void TakeOrder() {
-
+    public void TakeOrder()
+    {
       Console.WriteLine("Welcome to Pierre's Bakery Web Application");
       Console.WriteLine("__________________________________________");
       Console.WriteLine("Would you like to order bread? Type 'bread' for bread and 'no' if you'd like to order something else.");
@@ -32,7 +36,7 @@ namespace Bakery
         }
         else if (bakeryChoice == "no")
         {
-          OrderPastry();
+          SecondOrderQuestion();
         }
       }
       catch
@@ -41,9 +45,9 @@ namespace Bakery
       }
     }
 
-public void FinalizeOrder() {
-      //int totalBreadCost = SetBreadDiscount(quantityOrdered);
-      
+
+    public void SecondOrderQuestion()
+    {
       Console.WriteLine("Would you like to checkout? Type 'pastry' to add pastries to your order and 'checkout' to checkout.");
       
       string bakeryChoice = Console.ReadLine().ToUpper();
@@ -84,10 +88,9 @@ public void FinalizeOrder() {
       {
         Console.WriteLine($"Unable to parse '{breadOrder}'");
       }
+    SecondOrderQuestion();
 
     }
-
-      
 
     public void OrderPastry()
     {
@@ -108,9 +111,9 @@ public void FinalizeOrder() {
       {
         Console.WriteLine($"Unable to parse '{pastryOrder}'");
       }
-      
-     
+    Checkout();
     }
+
     public void Checkout()
     {
       Console.WriteLine("Would you like to checkout? Type 'checkout' to checkout and click 'Enter' to restart our program");
@@ -120,8 +123,8 @@ public void FinalizeOrder() {
       if (bakeryChoice == "checkout")
           {
             double finalTotal = bread.TotalCost + pastry.TotalCost;
-      Console.WriteLine("Your order total comes to $finalTotal");
-      Console.WriteLine("Thank you for choosing Pierre's Bakery! - See you again soon!");
+            Console.WriteLine($"Your order total comes to '{finalTotal}'");
+            Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
           }
       else
       {
