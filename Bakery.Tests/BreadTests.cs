@@ -23,7 +23,7 @@ namespace PierresBakery.Tests
       Assert.AreEqual(resultTotalCost, newBread.TotalCost);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void SetBreadDiscount_CalculatesTotalCostWithoutAccountingForDiscounts_Int()
     {
       //Arrange
