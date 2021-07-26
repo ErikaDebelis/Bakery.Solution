@@ -22,6 +22,7 @@ namespace Bakery
     {
       Console.WriteLine("Welcome to Pierre's Bakery Web Application");
       Console.WriteLine("**__________________________________________**");
+      Console.WriteLine("Our bread comes in at $5 a loaf and pastries are $2 each. If I were you though, I'd check out each cause I think there are some deals going on... hint hint, wink wink");
       Console.WriteLine("Would you like to order bread? Type 'bread' for bread and 'no' if you'd like to order something else.");
 
       string bakeryChoice = Console.ReadLine().ToUpper();

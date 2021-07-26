@@ -20,7 +20,7 @@ namespace PierresBakery
 
       if (convertedQuantityOrdered >= 3)
       {
-        double totalCost = Math.Ceiling(freePastry * 5);
+        double totalCost = Math.Ceiling(freePastry * 5) + ((convertedQuantityOrdered % 3) * individualCost);
           return totalCost;
       }
       else
