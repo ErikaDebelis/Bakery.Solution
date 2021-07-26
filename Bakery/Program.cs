@@ -13,8 +13,8 @@ namespace Bakery
 
       program.TakeOrder();
       program.OrderBread();
-      program.OrderPastry();
       program.SecondOrderQuestion();
+      program.OrderPastry();
       program.Checkout();
     }
 
@@ -22,8 +22,8 @@ namespace Bakery
     {
       Console.WriteLine("Welcome to Pierre's Bakery Web Application");
       Console.WriteLine("**__________________________________________**");
-      Console.WriteLine("Our bread comes in at $5 a loaf and pastries are $2 each. If I were you though, I'd check out each cause I think there are some deals going on... hint hint, wink wink");
-      Console.WriteLine("Would you like to order bread? Type 'bread' for bread and 'no' if you'd like to order something else.");
+      Console.WriteLine("Our bread comes in at $5 a loaf and pastries are $2 each. If I were you though, I'd check out each cause I think there are some deals going on... hint hint, wink wink. No pressure though...but it'd be cool if you did.");
+      Console.WriteLine("Would you like to order bread? Type 'bread' for bread and 'no' if you're not feeling bread at the moment.");
 
       string bakeryChoice = Console.ReadLine().ToUpper();
       bread = new Bread(0, 0);
@@ -38,6 +38,10 @@ namespace Bakery
         else if (bakeryChoice == "NO")
         {
           SecondOrderQuestion();
+        }
+        else
+        {
+          Console.WriteLine($"Well that wasn't the response I prompted you for, but I'll just go ahead and assume you meant to say 'bread'");
         }
       }
       catch
@@ -62,6 +66,10 @@ namespace Bakery
         else if (bakeryChoice == "NO")
         {
           Checkout();
+        }
+        else
+        {
+          Console.WriteLine($"{error}...a redo if you will ;)");
         }
       }
       catch
@@ -91,7 +99,6 @@ namespace Bakery
         Console.WriteLine($"Unable to parse '{breadOrder}'");
       }
     SecondOrderQuestion();
-
     }
 
     public void OrderPastry()
@@ -128,16 +135,15 @@ namespace Bakery
             double finalTotal = bread.TotalCost + pastry.TotalCost;
             Console.WriteLine($"Your order total comes to ${finalTotal}");
             Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
-            Console.WriteLine("NEXT!- Lets move it people! I've got a business to run here!");
-            Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+            Console.WriteLine("Next in line please!");
+            Console.WriteLine("~*~*~*~*~*~*~*~*~*THE END*~*~*~*~*~*~*~*~*~*~*");
             Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
             TakeOrder();
           }
       else
       {
-        Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
         Console.WriteLine("NEXT!- Lets move it people! I've got a business to run here!");
-        Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+        Console.WriteLine("~*~*~*~*~*~*~*~*~*THE END*~*~*~*~*~*~*~*~*~*~*");
         Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
         TakeOrder();
       }
