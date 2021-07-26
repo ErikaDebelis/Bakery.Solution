@@ -10,7 +10,6 @@ namespace PierresBakery
     {
       QuantityOrdered = quantityOrdered;
       TotalCost = totalCost;
-      Console.WriteLine($"{QuantityOrdered}");
     }
     public double SetPastryDiscount(int quantityOrdered)
     {

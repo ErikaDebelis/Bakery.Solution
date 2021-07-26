@@ -82,7 +82,7 @@ namespace Bakery
         quantityOrdered += int.Parse(breadOrder);
 
         bread.TotalCost = bread.SetBreadDiscount(quantityOrdered);
-        Console.WriteLine($"Your current total is ${bread.TotalCost}" );
+        Console.WriteLine($"Your total cost for bread is ${bread.TotalCost}" );
 
       }
       catch
@@ -106,7 +106,7 @@ namespace Bakery
         quantityOrdered += int.Parse(pastryOrder);
 
         pastry.TotalCost = pastry.SetPastryDiscount(quantityOrdered);
-        Console.WriteLine($"Your current total is ${pastry.TotalCost}" );
+        Console.WriteLine($"Your total cost for pastry is ${pastry.TotalCost}" );
 
       }
       catch
@@ -127,13 +127,17 @@ namespace Bakery
             double finalTotal = bread.TotalCost + pastry.TotalCost;
             Console.WriteLine($"Your order total comes to ${finalTotal}");
             Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
-            Console.WriteLine("______________________________________________");
+            Console.WriteLine("NEXT!- Lets move it people! I've got a business to run here!");
+            Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+            Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
             TakeOrder();
           }
       else
       {
         Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
-        Console.WriteLine("______________________________________________");
+        Console.WriteLine("NEXT!- Lets move it people! I've got a business to run here!");
+        Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+        Console.WriteLine("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
         TakeOrder();
       }
     }
