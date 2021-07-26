@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PierresBakery;
 
 namespace PierresBakery.Tests
 {
@@ -7,16 +6,16 @@ namespace PierresBakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void SetProperties_BreadConstructorSetsPropertiesAccurately_Int()
+    public void SetProperties_BreadConstructorSetsPropertiesAccurately_IntDouble()
     {
       //Arrange
       int quantityOrdered = 5;
-      int totalCost = 20;
+      double totalCost = 20;
 
       //Act
       Bread newBread = new Bread(quantityOrdered, totalCost);
       int resultQuantityOrdered = newBread.QuantityOrdered;
-      int resultTotalCost = newBread.TotalCost;
+      double resultTotalCost = newBread.TotalCost;
 
       //AsserttotalCost
       Assert.AreEqual(resultQuantityOrdered, newBread.QuantityOrdered);
@@ -24,36 +23,52 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void SetBreadDiscount_CalculatesTotalCostWithoutAccountingForDiscounts_Int()
+    public void SetBreadDiscount_CalculatesTotalCostWithoutAccountingForDiscounts_Double()
     {
       //Arrange
       int quantityOrdered = 5;
-      int totalCost = 20;
+      double totalCost = 20;
 
       //Act
       Bread newBread = new Bread(quantityOrdered, totalCost);
       int resultQuantityOrdered = newBread.QuantityOrdered;
-      int resultTotalCost = newBread.TotalCost;
+      double resultTotalCost = newBread.TotalCost;
 
       //AsserttotalCost
       Assert.AreEqual(resultQuantityOrdered, newBread.QuantityOrdered);
       Assert.AreEqual(resultTotalCost, 20);
     }
     [TestMethod]
-    public void SetBreadDiscount_CalculatesTotalCostWithDiscounts_Int()
+    public void SetBreadDiscount_CalculatesTotalCostWithDiscounts_Double()
     {
       //Arrange
       int quantityOrdered = 6;
-      int totalCost = 20;
+      double totalCost = 20;
 
       //Act
       Bread newBread = new Bread(quantityOrdered, totalCost);
       int resultQuantityOrdered = newBread.QuantityOrdered;
-      int resultTotalCost = newBread.TotalCost;
+      double resultTotalCost = newBread.TotalCost;
 
       //AsserttotalCost
       Assert.AreEqual(resultQuantityOrdered, newBread.QuantityOrdered);
       Assert.AreEqual(resultTotalCost, 20);
+    }
+    [TestMethod]
+    public void SetBreadDiscount_CalculatesTotalCostifordersLesThan3Loaves_Double()
+    {
+      //Arrange
+      int quantityOrdered = 1;
+      double totalCost = 5;
+
+      //Act
+      Bread newBread = new Bread(quantityOrdered, totalCost);
+      int resultQuantityOrdered = newBread.QuantityOrdered;
+      double resultTotalCost = newBread.TotalCost;
+
+      //AsserttotalCost
+      Assert.AreEqual(resultQuantityOrdered, newBread.QuantityOrdered);
+      Assert.AreEqual(resultTotalCost, 5);
     }
   }
 }

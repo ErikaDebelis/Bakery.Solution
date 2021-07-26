@@ -20,12 +20,17 @@ namespace PierresBakery
       if (convertedQuantityOrdered % 3 == 0)
       {
         double totalCost = (individualCost * convertedQuantityOrdered) - (individualCost * freeLoaf);
-          return TotalCost;
+          return totalCost;
+      }
+      else if (convertedQuantityOrdered < 3)
+      {
+        double totalCost = (individualCost * convertedQuantityOrdered);
+          return totalCost;
       }
       else
       {
         double totalCost = (individualCost * convertedQuantityOrdered) - individualCost;
-          return TotalCost;
+          return totalCost;
       }
     }
   }

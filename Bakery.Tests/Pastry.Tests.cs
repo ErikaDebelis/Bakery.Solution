@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PierresBakery;
 
 namespace PierresBakery.Tests
 {
@@ -7,11 +6,11 @@ namespace PierresBakery.Tests
   public class PastryTests
   {
     [TestMethod]
-    public void SetProperties_PastryConstructorSetsPropertiesAccurately_Int()
+    public void SetProperties_PastryConstructorSetsPropertiesAccurately_IntDouble()
     {
       //Arrange
       int quantityOrdered = 5;
-      int totalCost = 9;
+      double totalCost = 9;
 
       //Act
       Pastry newPastry = new Pastry(quantityOrdered, totalCost);
@@ -23,11 +22,11 @@ namespace PierresBakery.Tests
       Assert.AreEqual(resultTotalCost, newPastry.TotalCost);
     }
     [TestMethod]
-    public void SetPastryDiscount_CalculatesTotalCostWhileAccountingForDiscounts_Int()
+    public void SetPastryDiscount_CalculatesTotalCostWhileAccountingForDiscounts_Double()
     {
       //Arrange
       int quantityOrdered = 9;
-      int totalCost = 15;
+      double totalCost = 15;
 
       //Act
       Pastry newPastry = new Pastry(quantityOrdered, totalCost);

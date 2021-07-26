@@ -82,7 +82,8 @@ namespace Bakery
         quantityOrdered += int.Parse(breadOrder);
 
         bread.TotalCost = bread.SetBreadDiscount(quantityOrdered);
-        bread.QuantityOrdered = quantityOrdered;
+        Console.WriteLine($"Your current total is ${bread.TotalCost}" );
+
       }
       catch
       {
@@ -105,7 +106,8 @@ namespace Bakery
         quantityOrdered += int.Parse(pastryOrder);
 
         pastry.TotalCost = pastry.SetPastryDiscount(quantityOrdered);
-        pastry.QuantityOrdered = quantityOrdered;
+        Console.WriteLine($"Your current total is ${pastry.TotalCost}" );
+
       }
       catch
       {
@@ -123,7 +125,6 @@ namespace Bakery
       if (bakeryChoice == "CHECKOUT")
           {
             double finalTotal = bread.TotalCost + pastry.TotalCost;
-            Console.WriteLine($"{bread.TotalCost}, {pastry.TotalCost}" );
             Console.WriteLine($"Your order total comes to ${finalTotal}");
             Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
             Console.WriteLine("______________________________________________");
