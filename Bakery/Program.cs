@@ -21,7 +21,7 @@ namespace Bakery
     public void TakeOrder()
     {
       Console.WriteLine("Welcome to Pierre's Bakery Web Application");
-      Console.WriteLine("__________________________________________");
+      Console.WriteLine("**__________________________________________**");
       Console.WriteLine("Would you like to order bread? Type 'bread' for bread and 'no' if you'd like to order something else.");
 
       string bakeryChoice = Console.ReadLine().ToUpper();
@@ -30,11 +30,11 @@ namespace Bakery
 
       try
       {
-        if (bakeryChoice == "bread")
+        if (bakeryChoice == "BREAD")
         {
           OrderBread();
         }
-        else if (bakeryChoice == "no")
+        else if (bakeryChoice == "NO")
         {
           SecondOrderQuestion();
         }
@@ -48,17 +48,17 @@ namespace Bakery
 
     public void SecondOrderQuestion()
     {
-      Console.WriteLine("Would you like to checkout? Type 'pastry' to add pastries to your order and 'checkout' to checkout.");
+      Console.WriteLine("Would you like to order any pastries? Type 'pastry' to add pastries to your order and 'no' if you'd rather skip it");
       
       string bakeryChoice = Console.ReadLine().ToUpper();
       
       try
       {
-        if (bakeryChoice == "pastry")
+        if (bakeryChoice == "PASTRY")
         {
           OrderPastry();
         }
-        else if (bakeryChoice == "checkout")
+        else if (bakeryChoice == "NO")
         {
           Checkout();
         }
@@ -79,7 +79,7 @@ namespace Bakery
 
       try
       {
-        quantityOrdered = int.Parse(breadOrder);
+        quantityOrdered += int.Parse(breadOrder);
 
         bread.TotalCost = bread.SetBreadDiscount(quantityOrdered);
         bread.QuantityOrdered = quantityOrdered;
@@ -102,7 +102,7 @@ namespace Bakery
 
       try
       {
-        quantityOrdered = int.Parse(pastryOrder);
+        quantityOrdered += int.Parse(pastryOrder);
 
         pastry.TotalCost = pastry.SetPastryDiscount(quantityOrdered);
         pastry.QuantityOrdered = quantityOrdered;
@@ -120,14 +120,19 @@ namespace Bakery
       
       string bakeryChoice = Console.ReadLine().ToUpper();
       
-      if (bakeryChoice == "checkout")
+      if (bakeryChoice == "CHECKOUT")
           {
             double finalTotal = bread.TotalCost + pastry.TotalCost;
-            Console.WriteLine($"Your order total comes to '{finalTotal}'");
+            Console.WriteLine($"{bread.TotalCost}, {pastry.TotalCost}" );
+            Console.WriteLine($"Your order total comes to ${finalTotal}");
             Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
+            Console.WriteLine("______________________________________________");
+            TakeOrder();
           }
       else
       {
+        Console.WriteLine($"Thank you for choosing Pierre's Bakery! - See you again soon!");
+        Console.WriteLine("______________________________________________");
         TakeOrder();
       }
     }

@@ -6,7 +6,7 @@ namespace PierresBakery
     public int QuantityOrdered  {get; set; }
     public double TotalCost {get; set; }
 
-    public Pastry(int quantityOrdered, int totalCost)
+    public Pastry(int quantityOrdered, double totalCost)
     {
       QuantityOrdered = quantityOrdered;
       TotalCost = totalCost;

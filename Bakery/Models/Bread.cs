@@ -1,28 +1,30 @@
-﻿namespace PierresBakery
+﻿using System;
+namespace PierresBakery
 {
   public class Bread
   {
     public int QuantityOrdered  { get; set; }
-    public int TotalCost { get; set; }
+    public double TotalCost { get; set; }
 
-    public Bread(int quantityOrdered, int totalCost)
+    public Bread(int quantityOrdered, double totalCost)
     {
       QuantityOrdered = quantityOrdered;
       TotalCost = totalCost;
     }
-    public int SetBreadDiscount(int quantityOrdered)
+    public double SetBreadDiscount(int quantityOrdered)
     {
-      int freeLoaf= quantityOrdered/3;
-      int individualCost = 5;
+      double convertedQuantityOrdered = Convert.ToDouble(quantityOrdered);
+      double freeLoaf= convertedQuantityOrdered/3;
+      double individualCost = 5;
 
-      if (quantityOrdered % 3 == 0)
+      if (convertedQuantityOrdered % 3 == 0)
       {
-        TotalCost = (individualCost * quantityOrdered) - (individualCost * freeLoaf);
+        double totalCost = (individualCost * convertedQuantityOrdered) - (individualCost * freeLoaf);
           return TotalCost;
       }
       else
       {
-        TotalCost = (individualCost * quantityOrdered) - individualCost;
+        double totalCost = (individualCost * convertedQuantityOrdered) - individualCost;
           return TotalCost;
       }
     }
