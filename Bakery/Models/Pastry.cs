@@ -17,9 +17,18 @@ namespace PierresBakery
       double convertedQuantityOrdered = Convert.ToDouble(quantityOrdered);
 
       double freePastry= Math.Floor(convertedQuantityOrdered/3);
-      double totalCost = Math.Ceiling(freePastry * 5);
+      double individualCost = 2;
 
-      return totalCost;
+      if (convertedQuantityOrdered >= 3)
+      {
+        double totalCost = Math.Ceiling(freePastry * 5);
+          return totalCost;
+      }
+      else
+      {
+        double totalCost = (individualCost * convertedQuantityOrdered);
+          return totalCost;
+      }
     }
   }
 }

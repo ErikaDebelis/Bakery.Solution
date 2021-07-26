@@ -37,6 +37,22 @@ namespace PierresBakery.Tests
       Assert.AreEqual(resultQuantityOrdered, newPastry.QuantityOrdered);
       Assert.AreEqual(resultTotalCost, 15);
     }
+    [TestMethod]
+    public void SetPastryDiscount_CalculatesTotalCostWhileAccountingForDiscountsAndQauntityOrderedIsLessThan3_Double()
+    {
+      //Arrange
+      int quantityOrdered = 1;
+      double totalCost = 2;
+
+      //Act
+      Pastry newPastry = new Pastry(quantityOrdered, totalCost);
+      int resultQuantityOrdered = newPastry.QuantityOrdered;
+      double resultTotalCost = newPastry.TotalCost;
+
+      //AsserttotalCost
+      Assert.AreEqual(resultQuantityOrdered, newPastry.QuantityOrdered);
+      Assert.AreEqual(resultTotalCost, 2);
+    }
   }
 }
 
